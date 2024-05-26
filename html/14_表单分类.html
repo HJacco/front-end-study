@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- action代表表单提交地址， method 请求方法get, post -->
+    <form action="https://www.baidu.com/s">
+        <input type="text" name="wd">
+        <button>搜索</button>
+    </form>
+    <hr>
+
+    <form action="https://search.jd.com/search">
+       <fieldset>
+        <legend>主要信息</legend>
+         <!-- label可以关联输入框，实现点击文本获取对应输入框的功能， for属性关联的是输入框的id;
+         也可以不根据for属性关联，直接将对应的控件包括在label里面
+        -->
+        <label for="accountId">账户：</label>
+        <input id="accountId" type="text" name="account" value="zhangsan" maxlength="20"/><br>
+        密码：<input type="password" name="pwd" maxlength="12"/> <br>
+        <!-- 单选框 checked 代表选中， 多个单选框需要name相同才能联动 -->
+        性别：
+        <label><input type="radio" name="gender" value="male">男</label>
+        <label><input type="radio" name="gender" value="famale" checked>女</label>
+        </fieldset>
+        <br>
+        爱好：
+        <input type="checkbox" name="hobby" value="smoking" checked>吸烟
+        <input type="checkbox" name="hobby" value="drink">喝酒
+        <input type="checkbox" name="hobby" value="perm" checked>烫头
+        <br>
+        其他：<textarea name="other" cols="30" rows="3"></textarea><br>
+        籍贯：
+        <!-- 下拉框，name用于提交表单的时候的name, value是选择的选项value -->
+        <select name="from">
+            <option value="冀">河北</option>
+            <option value="鲁">山东</option>
+            <option value="晋" selected>山西</option>
+            <option value="粤">广东</option>
+        </select>
+        <br>
+        <!-- 隐藏域 -->
+        <input type="hidden" name="from" value="toutiao">
+        <br>
+        <!-- 表单提交按钮 第一种写法 -->
+        <button type="submit">提交</button>
+        <!-- 表单提交按钮 在form标签里面的button，不指名type，则默认是submit 第二种写法 -->
+        <input type="submit" value="确认">
+        <button>第三种提交</button>
+        
+        <input type="reset" value="点我重置">
+        <button type="reset">重置</button>
+        <!-- disabled可以禁用按钮 -->
+        <input disabled type="button" value="检测账户是否被注册">
+        
+    </form>
+</body>
+</html>
