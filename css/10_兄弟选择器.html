@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>兄弟选择器</title>
+    <style>
+        /* 只向下查找第一个相邻元素 */
+        div+p {
+            font-size: 20px;
+            color: red;
+        }
+         /* div所有的兄弟元素，只向下查找 */
+        div ~ p {
+            font-size: 20px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p>div上面的p</p>
+    <div>第一个div</div>
+    <p>第一个p</p>
+    <p>第二个p</p>
+    <p>第三个p</p>
+</body>
+</html>

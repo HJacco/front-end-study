@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>兄弟选择器</title>
+    <style>
+        /* 选中带有title属性的元素 */
+       [title] {
+        font-size: 20px;
+        color: red;
+       }
+        /* 选中带有title属性值为green的元素 */
+       [title='super01'] {
+        font-size: 20px;
+        color: green;
+       }
+
+       /* 选中带有title属性值以su开头的元素 */
+       [title^='su'] {
+        font-size: 20px;
+        color: green;
+       }
+
+       /* 选中带有title属性值以01结尾的元素 */
+       [title$='01'] {
+        font-size: 20px;
+        color: green;
+       }
+
+       /* 选中带有title属性值包含01的元素 */
+       [title*='01'] {
+        font-size: 20px;
+        color: green;
+       }
+
+    </style>
+</head>
+<body>
+    <div title="super01">超级大乐透01</div>
+    <div title="super02">超级大乐透02</div>
+    <div title="atSuper01">超级大乐透03</div>
+    <div title="atSuper02">超级大乐透04</div>
+</body>
+</html>
